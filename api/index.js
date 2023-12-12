@@ -42,13 +42,13 @@ app.get("/", (req, res, next) => {
   res.send("Server Start");
 });
 
-// Serve static files from the Vite build output
-app.use(express.static(path.join(__dirname, "dist")));
+// // Serve static files from the Vite build output
+// app.use(express.static(path.join(__dirname, "dist")));
 
-// Handle requests that don't match any static files
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
+// // Handle requests that don't match any static files
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist", "index.html"));
+// });
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
