@@ -36,6 +36,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api", apiRouter);
 
+app.get("/", (req, res, next) => {
+  res.send("Server Start");
+});
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
