@@ -21,10 +21,11 @@ async function main() {
   await mongoose.connect(mongoDB);
 }
 
+app.options("*", cors());
+
 app.use(
   cors({
-    origin:
-      "https://6577ae74d1f01f65994e6fa3--verdant-muffin-1afe28.netlify.app",
+    origin: "*",
     credentials: true,
   })
 );
