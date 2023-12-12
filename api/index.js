@@ -23,7 +23,8 @@ async function main() {
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin:
+      "https://6577ae74d1f01f65994e6fa3--verdant-muffin-1afe28.netlify.app/",
     credentials: true,
   })
 );
