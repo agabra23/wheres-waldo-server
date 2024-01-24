@@ -25,7 +25,11 @@ app.options("*", cors());
 
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "http://localhost:5173/",
+      "https://wheres-waldo-client.vercel.app",
+      "https://wheres-waldo-client*",
+    ],
     credentials: true,
   })
 );
